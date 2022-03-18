@@ -38,6 +38,7 @@ export function ChangeColor(): JSX.Element {
                         id={"colors-choice-" + color}
                         label={color}
                         value={color}
+                        style={{ backgroundColor: color }}
                         checked={chosenColor === color}
                     />
                 ))}
