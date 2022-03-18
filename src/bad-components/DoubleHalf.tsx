@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { setDhValue } from "./DoubleHalfState";
+//import { setDhValue } from "./DoubleHalfState";
 //import { dhValue, setDhValue } from "./DoubleHalfState";
 //deleted the import
 
