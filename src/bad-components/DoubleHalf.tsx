@@ -30,6 +30,7 @@ export function DoubleHalf(): JSX.Element {
             <div>
                 The current value is: <span>{dhValue}</span>
             </div>
+            {/* passed in the attributes*/}
             <Doubler dhValue={dhValue} setDhValue={setDhValue}></Doubler>
             <Halver dhValue={dhValue} setDhValue={setDhValue}></Halver>
         </div>
