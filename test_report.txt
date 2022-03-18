@@ -7,46 +7,304 @@ PASS src/arrays.test.ts
 PASS src/objects.test.ts
 PASS src/components/StartAttempt.test.tsx
 PASS src/components/TwoDice.test.tsx
+PASS src/form-components/MultipleChoiceQuestion.test.tsx
 PASS src/bad-components/ChooseTeam.test.tsx
 PASS src/bad-components/DoubleHalf.test.tsx
 PASS src/functions.test.ts
+PASS src/form-components/CheckAnswer.test.tsx
+PASS src/form-components/EditMode.test.tsx
 PASS src/components/ChangeType.test.tsx
 PASS src/components/CycleHoliday.test.tsx
+FAIL src/form-components/GiveAttempts.test.tsx
+  ● GiveAttempts Component tests › There is are initially 3 attempts
+
+    TestingLibraryElementError: Unable to find an element with the text: /3/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<h3>[39m
+            [0mGive Attempts[0m
+          [36m</h3>[39m
+          [36m<div>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-label"[39m
+              [33mfor[39m=[32m"giveAttempts"[39m
+            [36m>[39m
+              [0mNumber of Attempts:[0m
+            [36m</label>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-control"[39m
+              [33mid[39m=[32m"giveAttempts"[39m
+              [33mtype[39m=[32m"number"[39m
+              [33mvalue[39m=[32m"0"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0muse[0m
+            [36m</button>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0mgain[0m
+            [36m</button>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      15 |
+      16 |     test("There is are initially 3 attempts", () => {
+    > 17 |         expect(screen.getByText(/3/i)).toBeInTheDocument();
+         |                       ^
+      18 |     });
+      19 |
+      20 |     test("You can use attempts", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/form-components/GiveAttempts.test.tsx:17:23)
+
+  ● GiveAttempts Component tests › You can use attempts
+
+    TestingLibraryElementError: Unable to find an element with the text: /2/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<h3>[39m
+            [0mGive Attempts[0m
+          [36m</h3>[39m
+          [36m<div>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-label"[39m
+              [33mfor[39m=[32m"giveAttempts"[39m
+            [36m>[39m
+              [0mNumber of Attempts:[0m
+            [36m</label>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-control"[39m
+              [33mid[39m=[32m"giveAttempts"[39m
+              [33mtype[39m=[32m"number"[39m
+              [33mvalue[39m=[32m"0"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0muse[0m
+            [36m</button>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0mgain[0m
+            [36m</button>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      21 |         const use = screen.getByRole("button", { name: /use/i });
+      22 |         use.click();
+    > 23 |         expect(screen.getByText(/2/i)).toBeInTheDocument();
+         |                       ^
+      24 |         use.click();
+      25 |         use.click();
+      26 |         expect(screen.getByText(/0/i)).toBeInTheDocument();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/form-components/GiveAttempts.test.tsx:23:23)
+
+  ● GiveAttempts Component tests › You can gain arbitrary attempts
+
+    TestingLibraryElementError: Unable to find an element with the text: /13/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<h3>[39m
+            [0mGive Attempts[0m
+          [36m</h3>[39m
+          [36m<div>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-label"[39m
+              [33mfor[39m=[32m"giveAttempts"[39m
+            [36m>[39m
+              [0mNumber of Attempts:[0m
+            [36m</label>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-control"[39m
+              [33mid[39m=[32m"giveAttempts"[39m
+              [33mtype[39m=[32m"number"[39m
+              [33mvalue[39m=[32m"0"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0muse[0m
+            [36m</button>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0mgain[0m
+            [36m</button>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      32 |         userEvent.type(amountToGive, "10");
+      33 |         gain.click();
+    > 34 |         expect(screen.getByText(/13/i)).toBeInTheDocument();
+         |                       ^
+      35 |         userEvent.type(amountToGive, "100");
+      36 |         gain.click();
+      37 |         expect(screen.getByText(/113/i)).toBeInTheDocument();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/form-components/GiveAttempts.test.tsx:34:23)
+
+  ● GiveAttempts Component tests › Cannot gain blank amounts
+
+    TestingLibraryElementError: Unable to find an element with the text: /3/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<h3>[39m
+            [0mGive Attempts[0m
+          [36m</h3>[39m
+          [36m<div>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-label"[39m
+              [33mfor[39m=[32m"giveAttempts"[39m
+            [36m>[39m
+              [0mNumber of Attempts:[0m
+            [36m</label>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-control"[39m
+              [33mid[39m=[32m"giveAttempts"[39m
+              [33mtype[39m=[32m"number"[39m
+              [33mvalue[39m=[32m""[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0muse[0m
+            [36m</button>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0mgain[0m
+            [36m</button>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      42 |         fireEvent.change(amountToGive, { target: { value: "" } });
+      43 |         gain.click();
+    > 44 |         expect(screen.getByText(/3/i)).toBeInTheDocument();
+         |                       ^
+      45 |     });
+      46 | });
+      47 |
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/form-components/GiveAttempts.test.tsx:44:23)
+
+FAIL src/form-components/ChangeColor.test.tsx
+  ● ChangeColor Component tests › Switching the color switches the displayed color.
+
+    expect(element).toHaveTextContent()
+
+    Expected element to have text content:
+      yellow
+    Received:
+      red
+
+      20 |         radios[2].click();
+      21 |         coloredBox = screen.getByTestId("colored-box");
+    > 22 |         expect(coloredBox).toHaveTextContent(radios[2].value);
+         |                            ^
+      23 |         expect(coloredBox).toHaveStyle({ backgroundColor: radios[2].value });
+      24 |         // Switch to 8th
+      25 |         radios[7].click();
+
+      at Object.<anonymous> (src/form-components/ChangeColor.test.tsx:22:28)
+
 PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
 PASS src/bad-components/ShoveBox.test.tsx
 PASS src/App.test.tsx
-----------------------|---------|----------|---------|---------|-------------------
-File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------------------|---------|----------|---------|---------|-------------------
-All files             |   99.13 |    97.84 |     100 |    99.1 |                   
- src                  |   99.41 |      100 |     100 |   99.39 |                   
-  App.tsx             |     100 |      100 |     100 |     100 |                   
-  arrays.ts           |   98.24 |      100 |     100 |   98.07 | 150               
-  functions.ts        |     100 |      100 |     100 |     100 |                   
-  nested.ts           |     100 |      100 |     100 |     100 |                   
-  objects.ts          |     100 |      100 |     100 |     100 |                   
- src/bad-components   |   96.87 |       50 |     100 |   96.66 |                   
-  ChooseTeam.tsx      |     100 |       50 |     100 |     100 | 19                
-  ColoredBox.tsx      |     100 |      100 |     100 |     100 |                   
-  DoubleHalf.tsx      |     100 |      100 |     100 |     100 |                   
-  DoubleHalfState.tsx |       0 |      100 |     100 |       0 | 3                 
-  ShoveBox.tsx        |     100 |      100 |     100 |     100 |                   
- src/components       |     100 |       96 |     100 |     100 |                   
-  ChangeType.tsx      |     100 |      100 |     100 |     100 |                   
-  Counter.tsx         |     100 |      100 |     100 |     100 |                   
-  CycleHoliday.tsx    |     100 |       90 |     100 |     100 | 45                
-  RevealAnswer.tsx    |     100 |      100 |     100 |     100 |                   
-  StartAttempt.tsx    |     100 |      100 |     100 |     100 |                   
-  TwoDice.tsx         |     100 |      100 |     100 |     100 |                   
- src/interfaces       |       0 |        0 |       0 |       0 |                   
-  answer.ts           |       0 |        0 |       0 |       0 |                   
-  question.ts         |       0 |        0 |       0 |       0 |                   
-----------------------|---------|----------|---------|---------|-------------------
+-----------------------------|---------|----------|---------|---------|-------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------------|---------|----------|---------|---------|-------------------
+All files                    |   98.83 |    97.24 |   99.21 |   98.79 |                   
+ src                         |   99.41 |      100 |     100 |   99.39 |                   
+  App.tsx                    |     100 |      100 |     100 |     100 |                   
+  arrays.ts                  |   98.24 |      100 |     100 |   98.07 | 150               
+  functions.ts               |     100 |      100 |     100 |     100 |                   
+  nested.ts                  |     100 |      100 |     100 |     100 |                   
+  objects.ts                 |     100 |      100 |     100 |     100 |                   
+ src/bad-components          |   96.87 |       50 |     100 |   96.66 |                   
+  ChooseTeam.tsx             |     100 |       50 |     100 |     100 | 19                
+  ColoredBox.tsx             |     100 |      100 |     100 |     100 |                   
+  DoubleHalf.tsx             |     100 |      100 |     100 |     100 |                   
+  DoubleHalfState.tsx        |       0 |      100 |     100 |       0 | 3                 
+  ShoveBox.tsx               |     100 |      100 |     100 |     100 |                   
+ src/components              |     100 |       96 |     100 |     100 |                   
+  ChangeType.tsx             |     100 |      100 |     100 |     100 |                   
+  Counter.tsx                |     100 |      100 |     100 |     100 |                   
+  CycleHoliday.tsx           |     100 |       90 |     100 |     100 | 45                
+  RevealAnswer.tsx           |     100 |      100 |     100 |     100 |                   
+  StartAttempt.tsx           |     100 |      100 |     100 |     100 |                   
+  TwoDice.tsx                |     100 |      100 |     100 |     100 |                   
+ src/form-components         |      96 |    93.75 |   93.75 |      96 |                   
+  ChangeColor.tsx            |      80 |      100 |   66.66 |      80 | 33                
+  CheckAnswer.tsx            |     100 |      100 |     100 |     100 |                   
+  EditMode.tsx               |     100 |      100 |     100 |     100 |                   
+  GiveAttempts.tsx           |     100 |       75 |     100 |     100 | 26                
+  MultipleChoiceQuestion.tsx |     100 |      100 |     100 |     100 |                   
+ src/interfaces              |       0 |        0 |       0 |       0 |                   
+  answer.ts                  |       0 |        0 |       0 |       0 |                   
+  question.ts                |       0 |        0 |       0 |       0 |                   
+-----------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 15 passed, 15 total
-Tests:       110 passed, 110 total
+Test Suites: 2 failed, 18 passed, 20 total
+Tests:       5 failed, 129 passed, 134 total
 Snapshots:   0 total
-Time:        8.834 s
+Time:        10.29 s
 Ran all test suites.
