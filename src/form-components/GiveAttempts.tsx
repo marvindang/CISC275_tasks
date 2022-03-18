@@ -13,7 +13,7 @@ export function GiveAttempts(): JSX.Element {
             <Form.Group controlId="giveAttempts">
                 <Form.Label>Number of Attempts:</Form.Label>
                 <Form.Control
-                    type="numnber"
+                    type="number"
                     value={requested}
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                         updatedRequested(event.target.value)
@@ -25,14 +25,14 @@ export function GiveAttempts(): JSX.Element {
                     onClick={() => setLeft(attempt - 1)}
                     disabled={attempt <= 0 ? true : false}
                 >
-                    Attempt Used
+                    use
                 </Button>
                 <Button
                     onClick={() =>
                         setLeft(parseInt(requested) + attempt || attempt)
                     }
                 >
-                    Attempt Added
+                    gain
                 </Button>
             </div>
         </div>
