@@ -10,6 +10,7 @@ export function GiveAttempts(): JSX.Element {
     return (
         <div>
             <h3>Give Attempts</h3>
+            <p>Attempts Left: {attempt}</p>
             <Form.Group controlId="giveAttempts">
                 <Form.Label>Number of Attempts:</Form.Label>
                 <Form.Control
