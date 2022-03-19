@@ -7,9 +7,7 @@ export function Quizzer(): JSX.Element {
             <h3>Quizzer</h3>
             <div>
                 <img
-                    src={
-                        "/Users/marvindang/CISC275_tasks/src/quizzer/IMG_6120.HEIC"
-                    }
+                    src="/Users/marvindang/CISC275_tasks/src/quizzer/IMG_6120.HEIC"
                     alt="Quizzer"
                 />
             </div>
