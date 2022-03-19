@@ -4,7 +4,7 @@ export function Quizzer(): JSX.Element {
     const tasks: string[] = ["Sketch,"];
     return (
         <div>
-            <h3>Quizzer</h3>
+            <h4>Quizzer</h4>
             <div>
                 <img
                     src={
@@ -13,7 +13,10 @@ export function Quizzer(): JSX.Element {
                     alt="Quizzer"
                 />
             </div>
+            <h3>Quiz Question</h3>
+            <h2>Select Question Below</h2>
             <div>
+                Tasks list:
                 <ul>
                     {tasks.map((name: string) => (
                         <li key={name}>{name}</li>
